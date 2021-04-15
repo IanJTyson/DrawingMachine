@@ -2,7 +2,7 @@ function setup() {
 
   let mirror;
   let m = false;
-  createCanvas(600, 600);
+  createCanvas(1000, 600);
   background(255);
   frameRate(10);
 
@@ -40,6 +40,6 @@ function draw() {
   if (mouseIsPressed) {
     //stroke(map(mouseX, 0, 600, 0, 255, true));
     line(mouseX, mouseY, pmouseX, pmouseY);
-    mirror();
-  }
+  //  mirror();
+}
 }
