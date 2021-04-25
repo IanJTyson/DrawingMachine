@@ -1,4 +1,3 @@
-let array = []
 
 function setup() {
   stroke(0);
@@ -26,9 +25,7 @@ function draw() {
     //stroke(map(mouseX, 0, 600, 0, 255, true));
     stroke(255);
     line(mouseX, mouseY, pmouseX, pmouseY);
-
 }
 }
-
 
 }
