@@ -1,28 +1,22 @@
 let array = []
 
 function setup() {
-
-  createCanvas(1000, 600);
+  stroke(0);
+  createCanvas(windowWidth, windowHeight);
   background(20, 100,150);
   frameRate(10);
-
-  strokeWeight(5);
-
 rectMode(CENTER);
-
-spawnDots();
-}
-
-function spawnDots(){
-  fill(255);
-  strokeWeight(2);
-  ellipse (width/2, 40, 20, 20);
 }
 
 function keyTyped(){
-  if (key === 'o'){
+  if (key === 's'){
     //save this image
-    saveCanvas('ConnectTheDots', 'png');
+    saveCanvas('Air', 'png');
+  } else if (key === 'c'){
+    for (let i = 0; i < 1000; i++) {
+      let r = random(0, windowWidth);
+       stroke(255);
+      line(windowWidth, i, 0 + r, i);
   }
   return false;
 }
@@ -30,10 +24,11 @@ function keyTyped(){
 function draw() {
   if (mouseIsPressed) {
     //stroke(map(mouseX, 0, 600, 0, 255, true));
+    stroke(255);
     line(mouseX, mouseY, pmouseX, pmouseY);
 
 }
-
+}
 
 
 }
